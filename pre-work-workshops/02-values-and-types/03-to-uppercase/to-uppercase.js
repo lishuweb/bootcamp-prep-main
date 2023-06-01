@@ -1,2 +1,3 @@
 // YOUR CODE BELOW
-console.log("hello".toUpperCase());
+const str = 'hello';
+console.log(str.toUpperCase());
