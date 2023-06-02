@@ -8,5 +8,5 @@ let happyNum = 1000;
 
 happyNum /= 500;
 happyNum *= 1;
-happyNum +=3;
+happyNum += 3;
 console.log(happyNum);
