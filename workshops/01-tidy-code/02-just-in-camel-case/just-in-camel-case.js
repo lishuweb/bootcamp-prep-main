@@ -1,18 +1,26 @@
 // YOUR CODE BELOW
-function justInCamelCase(undername) {
-  let camelcaseoutput = "";
-    let foundunder = false;
-    for(let i = 0; i<undername.length; i++) {
-    if (undername[i] === "_") {
-      foundunder = true;
-      } else {
-        if (foundunder) {
-        camelcaseoutput += undername[i].toUpperCase();
-      foundunder = false;
-    } else {
-      camelcaseoutput += undername[i];
+function justInCamelCase(undername) 
+{
+  let camelCaseOutput = "";
+  let foundUnder = false;
+  for(let i = 0; i<undername.length; i++) 
+  {
+    if (undername[i] === "_") 
+    {
+      foundUnder = true;
+    } 
+    else 
+    {
+      if (foundUnder) 
+      {
+        camelCaseOutput += undername[i].toUpperCase();
+        foundUnder = false;
+      } 
+      else 
+      {
+        camelCaseOutput += undername[i];
       }
+    }
   }
-  }
-      return camelcaseoutput;
+    return camelCaseOutput;
 }
