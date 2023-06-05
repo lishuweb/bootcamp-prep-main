@@ -2,7 +2,8 @@
 
 function greeting(name)
 {
-    if(name)
+    // if(name)
+    if(name !== undefined)  
     {
         return "Hello" + " " + name + "!" ;
     }
