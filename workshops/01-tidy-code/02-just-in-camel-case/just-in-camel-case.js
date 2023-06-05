@@ -3,7 +3,7 @@ function justInCamelCase(underName)
 {
   let camelCaseOutput = "";
   let foundUnder = false;
-  for(let i = 0; i<undername.length; i++) 
+  for(let i = 0; i<underName.length; i++) 
   {
     if (underName[i] === "_") 
     {
