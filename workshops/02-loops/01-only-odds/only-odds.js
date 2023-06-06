@@ -1,5 +1,4 @@
 // YOUR CODE BELOW
-
 function onlyOdds(number)
 {
     let sum = 0;
@@ -13,4 +12,3 @@ function onlyOdds(number)
     return sum;
 }
 onlyOdds();
-
