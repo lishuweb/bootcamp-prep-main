@@ -9,7 +9,7 @@ function howEqual(type1, type2)
     {
         return 'loosely';
     }
-    else 
+    else
     {
         return 'not equal';
     }

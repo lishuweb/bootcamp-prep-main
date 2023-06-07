@@ -1,13 +1,30 @@
 // YOUR CODE BELOW
-function isTruthy(value)
+function isTruthy(value) 
 {
-    if(value)
+    if (value) 
     {
-        return 'truthy';
+      return true;
     }
-    else 
+  
+    if (value === false) 
     {
-        return 'The boolean value false is falsey';
+      return 'The boolean value false is falsey';
     }
+  
+    if (value === null)
+    {
+      return 'The null value is falsey';
+    }
+  
+    if (value === 0) 
+    {
+      return 'The number 0 is falsey (the only falsey number)';
+    }
+  
+    if (value === '') 
+    {
+      return 'The empty string is falsey (the only falsey string)';
+    }
+  
+    return 'undefined is falsey';
 }
-isTruthy();
