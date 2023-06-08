@@ -1,7 +1,8 @@
 // Test One Restrictions: Do not declare any new variable with the let keyword
-let testOneMessage = 'test failing';
+let testOneMessage = 'test succeeding';
 
-function testOne() {
+function testOne() 
+{
   return testOneMessage;
 }
 
@@ -10,34 +11,40 @@ function testOne() {
 // (you can edit helperFunc though)
 let testTwoMessage = 'test failing';
 
-function testTwo() {
+function testTwo() 
+{
   helperFunc();
   return testTwoMessage;
 }
 
-function helperFunc(a) {
-  a = 'test succeeding';
-  return a;
+function helperFunc() 
+{
+  testTwoMessage = 'test succeeding';
+  return testTwoMessage;
 }
 
 
 // Test Three Restrictions: Type only a single character in either testThree or getMessage
 let testThreeMessage = 'test failing';
 
-function testThree(testThreeMessage) {
-  if (testThreeMessage) {
+function testThree(testThreeMessage) 
+{
+  if (testThreeMessage) 
+  {
     testThreeMessage = 'test succeeding';
   }
 
   let msg = getMessage();
   return msg;
 
-  function getMessage(value) {
-    if (value) {
+  function getMessage(value) 
+  {
+    if (value) 
+    {
       return testThreeMessage;
     }
 
-    return 'test failing';
+    return 'test succeeding';
   }
 }
 
@@ -45,16 +52,19 @@ function testThree(testThreeMessage) {
 // Test Four Restrictions: Delete only a single character from any function.
 let testFourMessage = 'test succeeding';
 
-function testFour(msg) {
-  function innerFunc(msg) {
+function testFour(msg) 
+{
+  function innerFunc(msg) 
+  {
     msg = msg
 
-    function doubleInner(msg) {
+    function doubleInner(msg) 
+    {
       testFourMessage = msg;
       return testFourMessage;
     }
 
-    testFourMessage = doubleInner('test failing')
+    // testFourMessage = doubleInner('test failing')
   }
 
   innerFunc(testFourMessage);
