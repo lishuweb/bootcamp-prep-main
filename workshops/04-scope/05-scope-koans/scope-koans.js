@@ -1,8 +1,9 @@
 // Test One Restrictions: Do not declare any new variable with the let keyword
-let testOneMessage = 'test succeeding';
+let testOneMessage = 'test failing';
 
 function testOne() 
 {
+  testOneMessage = 'test succeeding';
   return testOneMessage;
 }
 
@@ -39,12 +40,12 @@ function testThree(testThreeMessage)
 
   function getMessage(value) 
   {
-    if (value) 
+    if (!value) 
     {
       return testThreeMessage;
     }
 
-    return 'test succeeding';
+    return 'test failing';
   }
 }
 
@@ -58,13 +59,13 @@ function testFour(msg)
   {
     msg = msg
 
-    function doubleInner(msg) 
+    function doubleInner(mg) 
     {
       testFourMessage = msg;
       return testFourMessage;
     }
 
-    // testFourMessage = doubleInner('test failing')
+    testFourMessage = doubleInner('test failing')
   }
 
   innerFunc(testFourMessage);
@@ -72,3 +73,4 @@ function testFour(msg)
   msg = testFourMessage;
   return testFourMessage;
 }
+testFour();

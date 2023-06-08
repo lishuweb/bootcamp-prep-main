@@ -5,4 +5,5 @@ function sumThingsWrong(num1, num2)
   sum = num1 + num2;
   return sum;
 }
-sumThingsWrong();
+console.log(sumThingsWrong(-40, -60));
+
