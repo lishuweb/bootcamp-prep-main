@@ -16,7 +16,7 @@ function zeroDarkThirty(number)
             {
                 newNumber += number[i];
             }
-            return parseInt(newNumber);
+            return Number(newNumber);
         } 
     }
     return NaN;
