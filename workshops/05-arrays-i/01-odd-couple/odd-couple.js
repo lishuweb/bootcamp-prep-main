@@ -1,11 +1,13 @@
 // YOUR CODE BELOW
-function oddCouple(array)
+debugger;
+
+function oddCouple(arr)
 {
     let newArray = [];
-    for(i=0; i<array.length; i++)
+    for(i=0; i<arr.length; i++)
     {
-        let num = array[i];
-        if(array[i]%2)
+        let num = arr[i];
+        if(arr[i]%2)
         {
             newArray.push(num);
         }
