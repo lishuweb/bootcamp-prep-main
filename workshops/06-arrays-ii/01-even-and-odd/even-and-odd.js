@@ -1,28 +1,22 @@
 // YOUR CODE BELOW
-// ### Even and Odd
-
-// Define a function, `evenAndOdd`, that accepts an array.
-
-// `evenAndOdd` should return a new array. The first element in the new array
-// should be an array with all of the even numbers from the original array. The
-// second element in the new array should be an array with all of the odd numbers
-// from the original array.
-
-// ```javascript
-// evenAndOdd([1, 2, 3, 4, 5, 6]); // => [[ 2 ,4, 6 ], [ 1, 3, 5 ]]
-// ```
 
 function evenAndOdd(arr)
 {
-    let arr1 = '';
-    let arr2 = '';
-    if(arr%2===0)
+    debugger;
+    let evenArray = [];
+    let oddArray = [];
+    for(let i=0; i<arr.length; i++)
     {
-        arr1 += arr;
+        let currentNum = arr[i];
+        if(currentNum % 2 === 0)
+        {
+            evenArray.push(currentNum);
+        }
+        else 
+        {
+            oddArray.push(currentNum);
+        }
     }
-    else 
-    {
-        arr2 += arr;
-    }
+    return [evenArray, oddArray];
 }
 evenAndOdd();

@@ -18,4 +18,4 @@ function oddCouple(arr)
     }
     return newArray;
 }
-oddCouple();
+oddCouple([2,3,4,5]);
