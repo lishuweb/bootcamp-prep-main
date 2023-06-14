@@ -4,20 +4,22 @@ let leetChars = ['@', '8', '(', '|)', '3', 'ph', 'g', '#','l', '_|', '|<', '1', 
 // YOUR CODE BELOW
 function leetTranslator(objectChar)
 {
-    let objChar = {};
-    for(let i=0; i<letters.length; i++)
-    {
-        let currentLetter = letters[i];
-        let currentChar = leetChars[i];
-
-        objChar[currentLetter] = currentChar;
-    }
-    let currentString = '';
-    for(let i =0; i<objectChar.length; i++)
-    {
-        let letter = objectChar[i].toLowerCase();
-        let currentChar = objChar[currentLetter];
-        currentString += currentChar;
-    }
-    return currentString;
+   let newWord = [];
+   let value = [];
+   for(let i=0; i<letters.length; i++)
+   {
+        if(newWord[i] === letters[i])
+        {
+            value = i;
+        }
+   }
+   for(let i=0; i<leetChars.length; i++)
+   {
+        if(value[i] === leetChars[i])
+        {
+            newWord = leetChars[i];
+        }
+   }
+   return newWord.join();
 }
+leetTranslator("Lishu");
