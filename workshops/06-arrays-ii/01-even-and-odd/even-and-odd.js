@@ -1,5 +1,4 @@
 // YOUR CODE BELOW
-
 function evenAndOdd(arr)
 {
     debugger;

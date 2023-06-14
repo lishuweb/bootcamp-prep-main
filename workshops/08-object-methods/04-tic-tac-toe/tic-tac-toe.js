@@ -24,19 +24,30 @@ let ticTacToe = {
     ],
     move: function(character, rowNum, colNum)
     {
-        // only reassign the sell if it is currently null
-        if (!this.board[rowNum][colNum]) 
+        let final = ticTacToe.board;
+        let currentValue = [];
+        let data = [];
+        for(let i=0; i<rowNum; i++)
         {
-            this.board[rowNum][colNum] = player;
-      }
-  
-      console.log(this.board);
-      return this.board;
-    },
+            for(let j=0; j<colNum; j++)
+            {
+                // data.push([i][j]);
+                let value = data(rowNum, colNum);
+                data.push(value);
+            }
+            final.push(data);
+        }
+        return final;
+    }, 
 
     clear: function()
     {
-
+        board: [
+            [null, null, null],
+            [null, null, null],
+            [null, null, null]
+        ]
+        return this.board;
     }
 };
 
