@@ -2,8 +2,8 @@
 function mostVowels(str)
 {
     str = str + " ";
-  let vowels = "AEIOUaeiou"
-  let currentChar, currentWord, currentVowelsCount;
+    let vowels = "AEIOUaeiou"
+    let currentChar, currentWord, currentVowelsCount;
   let wordWithMostVowels = '', mostVowelsCount = 0;
   for (let i = 0; i < str.length; i++) {
     currentChar = str[i];
