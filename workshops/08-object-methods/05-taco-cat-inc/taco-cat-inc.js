@@ -23,6 +23,8 @@ let tacoCatInc = {
 };
 
 // YOUR CODE BELOW
+
+debugger;
 tacoCatInc.currentInventory = function()
 {
   let total = 0;
