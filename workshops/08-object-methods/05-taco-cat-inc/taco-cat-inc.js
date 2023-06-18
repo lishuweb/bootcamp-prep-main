@@ -23,3 +23,34 @@ let tacoCatInc = {
 };
 
 // YOUR CODE BELOW
+tacoCatInc.currentInventory = function()
+{
+  let total = 0;
+  for (let key in this) 
+  {
+    if (key === 'cash') 
+    {
+      continue;
+    }
+    let items = this[key];
+    for (let productName in items) 
+    {
+      let value = items[productName];
+      total += value.cost * value.quantity;
+    }
+  }
+  return total;
+};
+
+tacoCatInc.sale = function(order)
+{
+  let totalSales = 0;
+  for (let key in order) 
+  {
+    let value = order[key];
+    totalSales += this[key][value].cost;
+    this.cash += this[key][value].cost;
+    this[key][value].quantity--;
+  }
+  return totalSales;
+};
