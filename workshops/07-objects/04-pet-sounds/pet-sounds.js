@@ -36,27 +36,19 @@ let animalNoises = [
     }
   }
 ];
-// ### Pet Sounds
-
-// Write a function `petSounds` that takes an animal name and a country name.
-
-// Using the globally-defined animalNoises array, `petSounds` should return a
-// sentence that explains which sound the animal makes in the given country.
-
-// ```javascript
-// petSounds('dog', 'Iceland'); // => Dogs in Iceland say Voff voff!
-
-// petSounds('cat', 'Korea'); // => Cats in Korea say Nyaong!
-// ```
-
 // YOUR CODE BELOW
-function petSounds(animalName, countryName)
+function petSounds(animalName, countryName) 
 {
-  let sentence = '';
-  for(let i in animalNoises)
+  for (let i = 0; i < animalNoises.length; i++) 
   {
-    // let key1 = Object.keys(i);
-    console.log(Object.keys(animalNoises));
+      let animalObject = animalNoises[i];
+      if (animalName in animalObject) 
+      {
+        let value1 = animalObject[animalName];
+        let value2 = value1[countryName];
+        animalName = animalName[0].toUpperCase() + animalName.slice(1) + 's';
+        return animalName + ' in ' + countryName + ' say ' + value2;
+      }
   }
 }
 petSounds();

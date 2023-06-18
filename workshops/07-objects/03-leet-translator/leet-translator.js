@@ -20,6 +20,10 @@ function leetTranslator(objectChar)
             newWord = leetChars[i];
         }
    }
+   for(let i=0; i<objectChar.length; i++)
+   {
+    let l = objectChar[i]. toLowerCase();
+   }
    return newWord.join();
 }
 leetTranslator("Lishu");
