@@ -20,4 +20,4 @@ function leetTranslator(string)
         newWord += leetDict[currentStringChar];
     }
     return newWord;
-  }
+}
