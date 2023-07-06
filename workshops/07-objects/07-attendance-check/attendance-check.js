@@ -38,34 +38,25 @@ let classRoom = [
 ];
 
 // YOUR CODE BELOW
-// ### Attendance Check
-
-// Define a function, `attendanceCheck`, that accepts a day of the week as a string.
-
-// Using the globally-defined classRoom array, `attendanceCheck` should return a
-// new array with only the names of the students present on the inputted day of
-// the week.
-
-// ```javascript
-
-// classCheck('Monday'); // => ['Marnie', 'Shoshanna']
-
-// classCheck('Wednesday'); // => ['Marnie', 'Lena']
-// ```
-function attendanceCheck(dayWeek)
+function attendanceCheck(day) 
 {
-    let newArray = [];
-    let currentName = '';
-    for(let i=0; i<classRoom.length; i++)
+    let presentStudents = [];
+    for (let i = 0; i < classRoom.length; i++) 
     {
-        let week = Object.keys(classRoom[i]);
-        console.log(week);
-        // console.log(week[i]);
-        for(let j=0; j<week.length; j++)
+        let studentObj = classRoom[i];
+        let studentName = Object.keys(studentObj)[0];
+        let attendanceObjs = studentObj[studentName];
+        for (let j = 0; j < attendanceObjs.length; j++) 
         {
-            console.log(Object.keys(week)[j]);
+            let attendanceObj = attendanceObjs[j];
+            let dayName = Object.keys(attendanceObj)[0];
+            if (dayName === day && attendanceObj[dayName])
+            {
+                presentStudents.push(studentName);
+            }
         }
-
     }
+    return presentStudents;
 }
-attendanceCheck();
+debugger;
+attendanceCheck('Wednesday');
