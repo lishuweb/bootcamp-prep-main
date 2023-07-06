@@ -2,7 +2,6 @@
 function frequencyAnalysis(string)
 {
     let newObject = {};
-    // let count = 0;
     for(let i=0; i<string.length; i++)
     {
         let key = string[i];
