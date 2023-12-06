@@ -17,7 +17,7 @@ function allSystemsGo(systems)
             return false;
         }
     }
-    return false;
+    return true;
 }
 
 console.log(allSystemsGo(systems = {
